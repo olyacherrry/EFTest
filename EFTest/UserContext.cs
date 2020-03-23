@@ -11,7 +11,7 @@ namespace EFTest
     {
         public UserContext()
             : base("DbConnection")
-        { }
+        {Database.EnsureCreated();}
 
         public DbSet<User> Users { get; set; }
     }
